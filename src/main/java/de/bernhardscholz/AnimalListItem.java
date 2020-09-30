@@ -1,5 +1,7 @@
 package de.bernhardscholz;
 
+import java.util.Collection;
+
 public class AnimalListItem {
 
 
@@ -19,8 +21,21 @@ public class AnimalListItem {
         }
     }
 
+    /*public void removeAnimal(Animals animal) {
+        if ()
+    }
+
+     */
 
 
+    public void addAnimal(Animals animal) {
+        Collection<String> animalNameList = new AnimalListItem()
+        if (next == null) {
+            animalNameList.add(animal.getName());
+        } else {
+            next.addAnimal(animal);
+        }
+    }
 
     /*public void addAnimalTwo(Animals animal) {
         while (next != null) {
@@ -31,15 +46,4 @@ public class AnimalListItem {
     }
 
      */
-
-
-    public void addAnimal(Animals animal) {
-        if (next == null) {
-            AnimalListItem animalListItem = new AnimalListItem(animal);
-            next = animalListItem;
-        } else {
-            next.addAnimal(animal);
-        }
-    }
-
 }
